@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>傷病手当金計算ツール | 病気・ケガで休んだときの給付額をすぐ計算</title>
-<meta name="description" content="標準報酬月額の目安と休んだ日数を入れるだけで、健康保険の傷病手当金の日額・支給される合計額の目安がすぐ分かる無料の傷病手当金シミュレーションツールです。">
+<meta name="description" content="標準報酬月額の目安と休んだ日数を入れるだけで、健康保険の傷病手当金の日額・支給される合計額の目安がすぐ分かる無料の傷病手当金シミュレーションツールです。休職中の税金・社会保険料・扶養の扱いも解説。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://webtools-labs.com/shoubyou-teate-keisan/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370765779014113" crossorigin="anonymous"></script>
@@ -88,6 +88,21 @@
       "@type": "Question",
       "name": "退職した後も傷病手当金はもらえますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "退職日までに継続して1年以上健康保険に加入しており、かつ退職日時点ですでに傷病手当金を受給しているか、受給できる状態（労務不能で待期も完成している）であれば、退職後も残りの支給期間について引き続き受け取れます（資格喪失後の継続給付）。ただし退職日に出勤してしまうと継続給付の対象外になるため注意が必要です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "傷病手当金に税金はかかりますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "かかりません。傷病手当金は非課税なので、所得税はかからず、年末調整や確定申告で申告する収入にも含めません。ただし住民税は前の年の所得にかかるため、休職中も支払いが続きます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "休職中も社会保険料は払う必要がありますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "はい。健康保険・厚生年金の保険料は、休職して給与が出ない月も免除されません（産休・育休とは違います）。本人負担分は、毎月会社に振り込むか、復職後の給与からまとめて引かれるのが一般的です。払い方は勤務先に確認してください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "傷病手当金をもらっていても、家族の扶養に入れますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "税金の扶養（配偶者控除・扶養控除）では、傷病手当金は非課税なので収入に含めません。一方、社会保険の扶養では傷病手当金も収入として扱われ、日額3,612円以上（年額130万円以上に相当）だと扶養に入れないことがあります。退職後に受け取り続ける場合は特に注意してください。" }
     }
   ]
 }
@@ -261,7 +276,7 @@ footer.site-footer a { color: var(--accent); }
   <header class="masthead">
     <h1>傷病手当金計算ツール</h1>
     <p class="lede">標準報酬月額の目安と休んだ日数を入れるだけで、健康保険の傷病手当金の日額・支給される合計額の目安を計算できます。</p>
-    <span class="updated-note">制度情報 最終確認日: 2026年9月12日（全国健康保険協会公式サイトより）</span>
+    <span class="updated-note">制度情報 最終確認日: 2026年10月29日（全国健康保険協会公式サイトより）</span>
     <p class="ad-disclosure" style="font-size:0.75rem;opacity:0.7;margin:0.5rem 0 0;">※当サイトはアフィリエイト広告（PR）を利用しています。</p>
   </header>
 
@@ -372,6 +387,24 @@ footer.site-footer a { color: var(--accent); }
   </section>
 
   <section>
+    <h2>休職中のお金：税金・社会保険料・扶養はどうなる？</h2>
+    <div class="ref-table" style="overflow-x:auto">
+      <table>
+        <thead><tr><th>項目</th><th>休職中（傷病手当金を受け取っている間）の扱い</th></tr></thead>
+        <tbody>
+          <tr><td>所得税</td><td>傷病手当金は<strong>非課税</strong>。所得税はかからず、年末調整や確定申告の収入にも含めない</td></tr>
+          <tr><td>住民税</td><td>前の年の所得にかかるため、休職中も払う必要がある。給与から引けない月は、会社が立て替えるか、自分で納付する</td></tr>
+          <tr><td>健康保険・厚生年金の保険料</td><td><strong>免除されない</strong>。給与が出ない月も本人負担分を払う必要があり、会社に振り込むか、復職後の給与から引かれることが多い</td></tr>
+          <tr><td>雇用保険料</td><td>給与が出ない月はかからない</td></tr>
+          <tr><td>家族の税金の扶養（配偶者控除など）</td><td>傷病手当金は収入に含めない</td></tr>
+          <tr><td>家族の社会保険の扶養（130万円）</td><td>退職後に受け取る場合などは、傷病手当金も収入に含めて判定される（日額3,612円以上だと扶養に入れないことがある）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>休職中は給与がなくても社会保険料と住民税の支払いが続くため、傷病手当金の金額だけで生活費を考えると足りなくなることがあります。社会保険料の目安は<a href="https://webtools-labs.com/shakaihoken-uchiwake-keisan/">給与の社会保険料 内訳計算ツール</a>、住民税は<a href="https://webtools-labs.com/juminzei-keisan/">住民税計算ツール</a>で確認できます。</p>
+    <p class="disclaimer">社会保険料の払い方（会社への振込・復職後の天引きなど）は勤務先によって異なります。社会保険の扶養の判定は、扶養する家族が加入している健康保険が行います。</p>
+  </section>
+  <section>
     <h2>傷病手当金の申請の流れ</h2>
     <ol style="padding-left:1.3rem;">
       <li><strong>申請書を用意する。</strong>加入している健康保険（協会けんぽ・健康保険組合）の「傷病手当金支給申請書」を、Webサイトか勤務先で入手します。</li>
@@ -432,6 +465,18 @@ footer.site-footer a { color: var(--accent); }
     <details class="faq-item">
       <summary>退職した後も傷病手当金はもらえますか？</summary>
       <p>退職日までに継続して1年以上健康保険に加入しており、かつ退職日時点ですでに傷病手当金を受給しているか、受給できる状態（労務不能で待期も完成している）であれば、退職後も残りの支給期間について引き続き受け取れます（資格喪失後の継続給付）。ただし退職日に出勤してしまうと継続給付の対象外になるため注意が必要です。</p>
+    </details>
+    <details class="faq-item">
+      <summary>傷病手当金に税金はかかりますか？</summary>
+      <p>かかりません。傷病手当金は非課税なので、所得税はかからず、年末調整や確定申告で申告する収入にも含めません。ただし住民税は前の年の所得にかかるため、休職中も支払いが続きます。</p>
+    </details>
+    <details class="faq-item">
+      <summary>休職中も社会保険料は払う必要がありますか？</summary>
+      <p>はい。健康保険・厚生年金の保険料は、休職して給与が出ない月も免除されません（産休・育休とは違います）。本人負担分は、毎月会社に振り込むか、復職後の給与からまとめて引かれるのが一般的です。払い方は勤務先に確認してください。</p>
+    </details>
+    <details class="faq-item">
+      <summary>傷病手当金をもらっていても、家族の扶養に入れますか？</summary>
+      <p>税金の扶養（配偶者控除・扶養控除）では、傷病手当金は非課税なので収入に含めません。一方、社会保険の扶養では傷病手当金も収入として扱われ、日額3,612円以上（年額130万円以上に相当）だと扶養に入れないことがあります。退職後に受け取り続ける場合は特に注意してください。</p>
     </details>
   </section>
 
